@@ -12,7 +12,7 @@
 - (id)init:(NSString*)database{
     if (self = [super init]) {
         databaseName=database;
-        // Obtenir le chemins complet de la base de donées
+        // Obtenir le chemin complet de la base de donées
         NSArray *documentPaths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
         NSString *documentsDir = [documentPaths objectAtIndex:0];
         databasePath = [documentsDir stringByAppendingPathComponent:databaseName];
@@ -110,7 +110,7 @@
         if([columns count]!=i+1) //si ce n'est pas la dernière colonne on ajoute une virgule à la fin
             virgule=@",";
         else
-            virgule=@""; //si c'est la denière colonne on insure pas de virgule à la fin
+            virgule=@""; //si c'est la denière colonne on insère pas de virgule à la fin
         
         if([[column valueForKey:@"type"] isEqualToString:@"NSInteger"])
         {
@@ -137,7 +137,7 @@
             if([columns count]!=i+1) //si ce n'est pas la dernière colonne on ajoute une virgule à la fin
                 virgule=@",";
             else
-                virgule=@""; //si c'est la denière colonne on insure pas de virgule à la fin
+                virgule=@""; //si c'est la denière colonne on insère pas de virgule à la fin
             
             if([[column valueForKey:@"type"] isEqualToString:@"NSInteger"])
             {
